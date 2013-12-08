@@ -7,16 +7,16 @@ For example:
 
 Shortcode | Ligature | Arabic | Transliterations | English
 --- | --- | --- | --- | ---
-[Basmala]
+[Basmala]\\
 [Bismillah] | ﷽ | بسم الله الرحمن الرحيم  | bismi-llāh ir-raḥmān ir-raḥīm | In the name of God, most Gracious, most Compassionate
-[pbuh]
-[alayhis]
-[rahimaha]
-[rahimahu]
-[rahimahum]
-[raa]
-[ranha]
-[ranhu]
-[ranhum]
-[saw]
-[swt]
+[pbuh] |  |  |  |
+[alayhis] |  |  |  |
+[rahimaha] |  |  |  |
+[rahimahu] |  |  |  |
+[rahimahum] |  |  |  |
+[raa] |  |  |  |
+[ranha] |  |  |  |
+[ranhu] |  |  |  |
+[ranhum] |  |  |  |
+[saw] |  |  |  |
+[swt] |  |  |  |  
