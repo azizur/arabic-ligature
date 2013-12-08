@@ -21,5 +21,5 @@ Supported Short Codes:
 | [saw] |  |  |  |  |
 | [swt] |  |  |  |  |
 | [wasallam] |  |  |  |  |
-| [allah] |  |  |  |  |
+| [allah] | ﷲ | ﷲ | Allāh | Allah (God) |
 | [jallajalalouhou] | ﷻ | جل جلاله‎ | Jalla Jalāluhu | May He be Glorified and Exalted |
