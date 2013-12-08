@@ -20,3 +20,6 @@ Supported Short Codes:
 | [ranhum] |  |  |  |  |
 | [saw] |  |  |  |  |
 | [swt] |  |  |  |  |
+| [wasallam] |  |  |  |  |
+| [allah] |  |  |  |  |
+| [jallajalalouhou] | ﷻ | جل جلاله‎ | Jalla Jalāluhu | May He be Glorified and Exalted |
