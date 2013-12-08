@@ -5,5 +5,5 @@ Arabic Ligature will encode common Arabic phrases to respective Ligature using U
 
 For example:
 
-English -> Arabic -> Unicode Ligature
-Peace be upon him -> عليه السلام‎ -> U+FDFA or ﷺ
+| Shortcode | English | Arabic | Unicode Ligature |
+| [pbup] | Peace be upon him | عليه السلام‎ | ﷺ |
