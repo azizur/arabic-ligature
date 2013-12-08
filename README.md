@@ -7,4 +7,4 @@ For example:
 
 Shortcode | English | Arabic | Unicode Ligature
 --- | --- | --- | ---
-[pbup] | Peace be upon him | عليه السلام‎ | ﷺ
+[pbuh] | Peace be upon him | عليه السلام‎ | ﷺ
