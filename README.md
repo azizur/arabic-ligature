@@ -8,7 +8,7 @@ Supported Short Codes:
 | Short codes | Ligature | Arabic | Transliterations | English Translation |
 |:-:|:-:|---:|---|---|
 | [basmala] [bismillah] | ﷽ | بسم الله الرحمن الرحيم | bismi-llāhi r-raḥmāni r-raḥīm |  In the name of God, most Gracious, most Compassionate |
-| [pbuh] [alayhis] | ﷺ‎ | عليه السلام | ʿalayhi as-salām | Peace be upon him |
+| [pbuh] [alayhis] [saw] | ﷺ‎ | عليه السلام | ʿalayhi as-salām | Peace be upon him |
 | [rahimaha] |  |  |  |  |
 | [rahimahu] |  |  |  |  |
 | [rahimahum] |  |  |  |  |
@@ -16,7 +16,6 @@ Supported Short Codes:
 | [ranha] |  |  |  |  |
 | [ranhu] |  |  |  |  |
 | [ranhum] |  |  |  |  |
-| [saw] |  |  |  |  |
 | [swt] |  |  |  |  |
 | [wasallam] |  |  |  |  |
 | [allah] | ﷲ | ﷲ | Allāh | Allah (God) |
