@@ -9,7 +9,7 @@
  * License: GPLv2 or later
  */
 
-/*  Copyright 2013 Azizur Rahman (contact: http://azizur.com/contact/)
+/*  Copyright (c) 2013 Azizur Rahman (email: azizur@prodevstudio.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -40,13 +40,18 @@ class arabic_ligature {
             'In the name of God, most Gracious, most Compassionate'
         ),
         array( // sallallahou alayhe wasallam
-            // shortcode
             array('pbuh', 'saw', 'saaw', 'saas', 'saww', 'alayhis'),
-            // meta: array('Unicode Code Point','HTML Entity (Decimal)','HTML Entity (Hexadecimal)','URL Escape Code')
             array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
             'arabic',
             'ʿalayhi as-salām',
             'Peace be upon him'
+        ),
+        array( // Jalla Jalaluh/Jallajalalouhou/Subḥānahu wa ta'āla
+            array('swt', 'SWT'),
+            array('U+FDFB','&#65019;','&#xFDFB;','%EF%B7%BB'),
+            '&#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609;',
+            'Subḥānahu wa ta`āla',
+            'May He be Glorified and Exalted'
         ),
     );
 
