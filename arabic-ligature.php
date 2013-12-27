@@ -30,9 +30,18 @@ class arabic_ligature {
     private $_ligature_map;
 
     private $_ligatures = array(
+        array( // bismillah ar-rahman ar-raheem
+            // shortcode
+            array('bismillah', 'basmala'),
+            // meta: array('Unicode Code Point','HTML Entity (Decimal)','HTML Entity (Hexadecimal)','URL Escape Code')
+            array('U+FDFD', '&#65021;', '&#xFDFD;', '%EF%B7%BD'),
+            'arabic',
+            'bismi-llāhi r-raḥmāni r-raḥīm',
+            'In the name of God, most Gracious, most Compassionate'
+        ),
         array( // sallallahou alayhe wasallam
             // shortcode
-            array('alayhis', 'pbuh', 'saw'),
+            array('pbuh', 'saw', 'saaw', 'saas', 'saww', 'alayhis'),
             // meta: array('Unicode Code Point','HTML Entity (Decimal)','HTML Entity (Hexadecimal)','URL Escape Code')
             array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
             'arabic',
