@@ -41,21 +41,11 @@ class arabic_ligature {
         ),
     );
 
-
     function __construct() {
         add_filter( 'wp_title', array($this, 'filter_wp_title'), 100);
 
         $this->_denormalise_ligatures();
         $this->_register_shortcodes();
-    }
-
-    public function filter_entry_title($title) {
-        global $post;
-
-        if( $title == $post->post_title and !is_page() ) {
-            $title = $title." (modified title)";
-        }
-        return $title;
     }
 
     public function filter_wp_title($title) {
@@ -67,7 +57,6 @@ class arabic_ligature {
         $shortcode =  array_pop($args);
         return $this->_transform_ligature($shortcode);
     }
-
 
     private function _transform_ligature($ligature) {
 
