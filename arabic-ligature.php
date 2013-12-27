@@ -47,7 +47,7 @@ class arabic_ligature {
             'Peace be upon him'
         ),
         array( // Jalla Jalaluh/Jallajalalouhou/Subḥānahu wa ta'āla
-            array('swt', 'SWT'),
+            array('swt', 'SWT', 'jallajalaluh', 'jallajalalouhou'),
             array('U+FDFB','&#65019;','&#xFDFB;','%EF%B7%BB'),
             '&#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609;',
             'Subḥānahu wa ta`āla',

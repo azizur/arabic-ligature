@@ -18,4 +18,4 @@ Supported Short Codes:
 | [ranhum] |  |  |  |  |
 | [wasallam] |  |  |  |  |
 | [allah] | ﷲ | ﷲ | Allāh | Allah (God) |
-| [swt]<br />[jallajalalouhou] | &#xFDFB; | &#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609; | Jalla Jalāluhu | May He be Glorified and Exalted |
+| [swt]<br />[jallajalaluh]<br />[jallajalalouhou] | &#xFDFB; | &#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609; | Jalla Jalāluhu | May He be Glorified and Exalted |
