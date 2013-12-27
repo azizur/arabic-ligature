@@ -5,7 +5,7 @@ Arabic Ligature will encode common Arabic phrases to respective Ligature using U
 
 Supported Short Codes:
 
-| Short codes | Ligature | Arabic | Transliterations | English Translation |
+| Short codes | Ligature | Arabic | Transliteration | Translation |
 |:-:|:-:|---:|---|---|
 | [basmala]<br />[bismillah] | ﷽ | بسم الله الرحمن الرحيم | bismi-llāhi r-raḥmāni r-raḥīm |  In the name of God, most Gracious, most Compassionate |
 | [pbuh]<br />[alayhis]<br />[saw] | ﷺ‎ | عليه السلام | ʿalayhi as-salām | Peace be upon him |
