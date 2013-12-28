@@ -27,7 +27,7 @@
 
 class arabic_ligature {
 
-    const UNICODE = 0;
+    const UNICODE_CODE = 0;
     const UNICODE_HTML_DEC = 1;
     const UNICODE_HTML_HEX = 2;
     const UNICODE_HTML_URL = 3;
@@ -58,6 +58,13 @@ class arabic_ligature {
             '&#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609;',
             'Subḥānahu wa ta`āla',
             'May He be Glorified and Exalted'
+        ),
+        array( // Allah
+            array('allah'),
+            array('U+FDF2','&#65010;','&#xFDF2;','%EF%B7%B2'),
+            '&#1575;&#1604;&#1604;&#1607;',
+            'Allāh',
+            'Allah (God)'
         ),
     );
 
