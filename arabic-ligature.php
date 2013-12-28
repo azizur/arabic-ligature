@@ -27,6 +27,11 @@
 
 class arabic_ligature {
 
+    const UNICODE = 0;
+    const UNICODE_HTML_DEC = 1;
+    const UNICODE_HTML_HEX = 2;
+    const UNICODE_HTML_URL = 3;
+
     private $_ligature_map;
 
     private $_ligatures = array(
@@ -35,19 +40,20 @@ class arabic_ligature {
             array('bismillah', 'basmala'),
             // meta: array('Unicode Code Point','HTML Entity (Decimal)','HTML Entity (Hexadecimal)','URL Escape Code')
             array('U+FDFD', '&#65021;', '&#xFDFD;', '%EF%B7%BD'),
-            'arabic',
+            // arabic
+            '&#1576;&#1587;&#1605; &#1575;&#1604;&#1604;&#1607; &#1575;&#1604;&#1585;&#1581;&#1605;&#1606; &#1575;&#1604;&#1585;&#1581;&#1610;&#1605;',
             'bismi-llāhi r-raḥmāni r-raḥīm',
             'In the name of God, most Gracious, most Compassionate'
         ),
         array( // sallallahou alayhe wasallam
             array('pbuh', 'saw', 'saaw', 'saas', 'saww', 'alayhis'),
             array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
-            'arabic',
-            'ʿalayhi as-salām',
-            'Peace be upon him'
+            '&#1589;&#1604;&#1609; &#1575;&#1604;&#1604;&#1607; &#1593;&#1604;&#1610;&#1607; &#1608;&#1587;&#1604;&#1605;&#8206;',
+            'ṣall Allāhu ʿalay-hi wa-sallam',
+            'May Allāh honor him and grant him peace'
         ),
         array( // Jalla Jalaluh/Jallajalalouhou/Subḥānahu wa ta'āla
-            array('swt', 'SWT', 'jallajalaluh', 'jallajalalouhou'),
+            array('swt', 'jallajalaluh', 'jallajalalouhou'),
             array('U+FDFB','&#65019;','&#xFDFB;','%EF%B7%BB'),
             '&#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609;',
             'Subḥānahu wa ta`āla',
@@ -56,49 +62,58 @@ class arabic_ligature {
     );
 
     function __construct() {
-        add_filter( 'wp_title', array($this, 'filter_wp_title'), 100);
-
         $this->_denormalise_ligatures();
-        $this->_register_shortcodes();
+        $this->_register_filters();
+    }
+
+    private function _register_filters() {
+        add_filter( 'wp_title', array($this, 'filter_wp_title'), 100);
+        add_filter( 'the_content', array($this, 'filter_the_content'), 20 );
     }
 
     public function filter_wp_title($title) {
-        return do_shortcode($title);
-    }
 
-    function shortcode(){
-        $args = func_get_args();
-        $shortcode =  array_pop($args);
-        return $this->_transform_ligature($shortcode);
-    }
-
-    private function _transform_ligature($ligature) {
-
-        if(!array_key_exists($ligature, $this->_ligature_map)) {
-            return $ligature;
+        foreach($this->_ligature_map as $key=>$entry) {
+            $pattern[] = "/\[$key\]/i";
+            $replacement[] = array_shift($entry);
         }
 
-        return $this->_ligature_map[$ligature][0];
+        return preg_replace($pattern, $replacement, $title);
     }
 
-    private function _register_shortcodes() {
-        if(!isset($this->_ligature_map)) {
-            $this->_denormalise_ligatures();
+    public function filter_the_content($content) {
+
+        foreach($this->_ligature_map as $shortcode=>$data) {
+            $pattern[] = "/\[$shortcode\]/im";
+            $replacement[] = sprintf(
+                '<span title="%s (%s) %s">%s</span>',
+                $data['arabic'],
+                $data['transliteration'],
+                $data['translation'],
+                $data['ligature']
+            );
         }
 
-        foreach(array_keys($this->_ligature_map) as $shortcode) {
-            add_shortcode($shortcode, array($this, 'shortcode'));
-        }
+        $content = preg_replace($pattern, $replacement, $content);
+
+        return $content;
     }
 
     private function _denormalise_ligatures() {
-        foreach ($this->_ligatures as $ligature) {
-            list($keys, $meta, $transliteration, $translation) = $ligature;
 
-            foreach ($keys as $key) {
-                $this->_ligature_map[$key] = array($meta[2], $transliteration, $translation);
+        foreach ($this->_ligatures as $entry) {
+            list($short_codes, $ligature_codes, $arabic, $transliteration, $translation) = $entry;
+
+            foreach ($short_codes as $code) {
+                $this->_ligature_map[$code] = array(
+                    'ligature' => $ligature_codes[self::UNICODE_HTML_DEC],
+                    'arabic' => $arabic,
+                    'transliteration' => $transliteration,
+                    'translation' => $translation
+                );
             }
         }
+
     }
 }
 $arabic_ligature = new arabic_ligature();
