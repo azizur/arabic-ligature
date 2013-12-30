@@ -46,7 +46,7 @@ class arabic_ligature {
             'In the name of God, most Gracious, most Compassionate'
         ),
         array( // sallallahou alayhe wasallam
-            array('pbuh', 'saw', 'saaw', 'saas', 'saww', 'alayhis'),
+            array('pbuh', 'saw', 'saaw', 'saas', 'saww'),
             array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
             '&#1589;&#1604;&#1609; &#1575;&#1604;&#1604;&#1607; &#1593;&#1604;&#1610;&#1607; &#1608;&#1587;&#1604;&#1605;&#8206;',
             'ṣall Allāhu ʿalay-hi wa-sallam',
@@ -73,6 +73,13 @@ class arabic_ligature {
             'As-salamu alaykum',
             'Peace be upon you'
         ),
+        array( // `Alayhi s-salām
+            array('sa', 'alayhis'),
+            array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
+            '&#1589;&#1604;&#1609; &#1575;&#1604;&#1604;&#1607; &#1593;&#1604;&#1610;&#1607; &#1608;&#1587;&#1604;&#1605;&#8206;',
+            'ʿalay-hi wa-sallam',
+            'May Allāh honor him and grant him peace'
+        ),
     );
 
     function __construct() {
@@ -82,7 +89,17 @@ class arabic_ligature {
 
     private function _register_filters() {
         add_filter( 'wp_title', array($this, 'filter_wp_title'), 100);
-        add_filter( 'the_content', array($this, 'filter_the_content'), 20 );
+        add_filter( 'the_content', array($this, 'filter_the_content'), 20);
+//        add_action( 'wp_head', array($this, 'style'));
+    }
+
+    public function style() {
+        $style = '<style>';
+        $style .= '.arabic-ligature {';
+        $style .= ' font-family: "Times New Roman", sans-serif;';
+        $style .= '}';
+        $style .= '</style>';
+        echo $style;
     }
 
     public function filter_wp_title($title) {
@@ -100,7 +117,7 @@ class arabic_ligature {
         foreach($this->_ligature_map as $shortcode=>$data) {
             $pattern[] = "/\[$shortcode\]/im";
             $replacement[] = sprintf(
-                '<span title="%s (%s) %s">%s</span>',
+                '<span class="arabic-ligature" title="%s (%s) %s">%s</span>',
                 $data['arabic'],
                 $data['transliteration'],
                 $data['translation'],
