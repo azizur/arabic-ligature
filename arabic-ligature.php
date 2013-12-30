@@ -66,6 +66,13 @@ class arabic_ligature {
             'Allāh',
             'Allah (God)'
         ),
+        array( // As-salamu alaykum
+            array('salaam', 'sallam'),
+            array('','&#1575;&#1604;&#1587;&#1604;&#1575;&#1605;','&#1575;&#1604;&#1587;&#1604;&#1575;&#1605;',''),
+            '&#1575;&#1604;&#1587;&#1604;&#1575;&#1605;',
+            'As-salamu alaykum',
+            'Peace be upon you'
+        ),
     );
 
     function __construct() {
