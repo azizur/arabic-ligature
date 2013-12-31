@@ -78,7 +78,7 @@ class arabic_ligature {
             array('U+FDFA','&#65018;','&#xFDFA;','%EF%B7%BA'),
             '&#1589;&#1604;&#1609; &#1575;&#1604;&#1604;&#1607; &#1593;&#1604;&#1610;&#1607; &#1608;&#1587;&#1604;&#1605;&#8206;',
             'ʿalay-hi wa-sallam',
-            'May Allāh honor him and grant him peace'
+            'Upon him prayer and peace'
         ),
     );
 
