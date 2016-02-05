@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Arabic Ligature
+ * Plugin Name: Arabic Ligature +
  * Plugin URI: http://wordpress.org/plugins/arabic-ligature/
  * Description: Arabic Ligature will encode common Arabic phrases to respective Ligature using Unicode representation.
  * Version: 0.2.0
