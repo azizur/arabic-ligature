@@ -80,6 +80,13 @@ class arabic_ligature {
             'ʿalay-hi wa-sallam',
             'Upon him prayer and peace'
         ),
+        array( // Wa-Alaikum-us-Salaam
+            array('wasalaam', 'wasallam', 'waalaykumu'),
+            array('U+FDFA','&#1608;&#1593;&#1604;&#1610;&#1603;&#1605; &#1575;&#1604;&#1587;&#1604;&#1575;&#1605;','&#xFDFA;','%EF%B7%BA'),
+            '&#1589;&#1604;&#1609; &#1575;&#1604;&#1604;&#1607; &#1593;&#1604;&#1610;&#1607; &#1608;&#1587;&#1604;&#1605;&#8206;',
+            'Wa alaikum ussalam wa rahmatu Allah wa barakatuh',
+            'Peace be upon you and the mercy and blessings of God'
+        ),
     );
 
     function __construct() {
