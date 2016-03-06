@@ -1,0 +1,13 @@
+web:
+  image: wordpress
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+  volumes:
+    - .:/var/www/html/wp-content/plugins/arabic-ligature
+
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: password
