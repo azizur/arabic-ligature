@@ -1,0 +1,35 @@
+{
+    "containers": [{
+        "prettyName": "PHP-FPM 7.0",
+        "image": "dockunit/prebuilt-images:php-mysql-phpunit-wordpress-7.0-rc-1-fpm",
+        "beforeScripts": [
+            "service mysql start",
+            "wp core download --path=/temp/wp --allow-root",
+            "wp core config --path=/temp/wp --dbname=test --dbuser=root --allow-root",
+            "wp core install --url=http://localhost --title=Test --admin_user=admin --admin_password=12345 --admin_email=test@test.com --path=/temp/wp --allow-root",
+            "mkdir /temp/wp/wp-content/plugins/arabic-ligature",
+            "cp -r . /temp/wp/wp-content/plugins/arabic-ligature"
+        ],
+        "testCommand": "wp plugin activate arabic-ligature --allow-root --path=/temp/wp"
+    }, {
+        "prettyName": "PHP-FPM 5.6",
+        "image": "dockunit/prebuilt-images:php-mysql-phpunit-wordpress-5.6-fpm",
+        "beforeScripts": [
+            "service mysql start",
+            "wp core download --path=/temp/wp --allow-root",
+            "wp core config --path=/temp/wp --dbname=test --dbuser=root --allow-root",
+            "wp core install --url=http://localhost --title=Test --admin_user=admin --admin_password=12345 --admin_email=test@test.com --path=/temp/wp --allow-root",
+            "mkdir /temp/wp/wp-content/plugins/arabic-ligature",
+            "cp -r . /temp/wp/wp-content/plugins/arabic-ligature"
+        ],
+        "testCommand": "wp plugin activate arabic-ligature --allow-root --path=/temp/wp"
+    }, {
+        "prettyName": "PHP-FPM 5.2",
+        "image": "dockunit/prebuilt-images:php-mysql-phpunit-wordpress-5.2-fpm",
+        "beforeScripts": [
+            "service mysql start",
+            "wp-install latest"
+        ],
+        "testCommand": "wp-activate-plugin arabic-ligature.php"
+    }]
+}

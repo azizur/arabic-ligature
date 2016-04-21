@@ -21,3 +21,19 @@ Supported Short Codes:
 | [wasalaam]<br />[wasallam]<br />[waalaykumu] | &#1608;&#1593;&#1604;&#1610;&#1603;&#1605; &#1575;&#1604;&#1587;&#1604;&#1575;&#1605; | &#1608;&#1593;&#1604;&#1610;&#1603;&#1605; &#1575;&#1604;&#1587;&#1604;&#1575;&#1605; | Wa ‘alaykum al-salaam | And unto you peace |
 | [allah] | &#65010; | &#65010; | Allāh | Allah (God) |
 | [swt]<br />[jallajalaluh]<br />[jallajalalouhou] | &#xFDFB; | &#1587;&#1576;&#1581;&#1575;&#1606;&#1607; &#1608; &#1578;&#1593;&#1575;&#1604;&#1609; | Jalla Jalāluhu | May He be Glorified and Exalted |
+
+
+# Development
+
+## Unit Testing
+
+install Dockunit:
+
+```
+npm install -g dockunit
+```
+
+Run tests
+```
+dockunit --du-verbose
+```
