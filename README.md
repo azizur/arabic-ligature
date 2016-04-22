@@ -3,6 +3,8 @@ Arabic Ligature
 
 Arabic Ligature will encode common Arabic phrases to respective Ligature using Unicode representation.
 
+[![Build Status](https://travis-ci.org/azizur/arabic-ligature.svg?branch=master)](https://travis-ci.org/azizur/arabic-ligature)
+
 Supported Short Codes:
 
 | Short codes | Ligature | Arabic | Transliteration | Translation |
